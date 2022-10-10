@@ -1,1 +1,10 @@
-# test-repo
+#+TITLE: Readme
+#+AUTHOR: Kostas Zorbadelos (kzorba AT nixly DOT net)
+
+* bgp-te-tool: A tool to automate BGP Traffic Engineering in ISPs
+** Description
+A demonstration of a BGP TE tool in a lab topology using Juniper vMX routers.
+
+The tool utilizes Netbox (IPAM to contain announcement prefixes) and peering-manager (for eBGP Internet peerings) as sources of truth. These systems contain our intended announcements, their policy and all the BGP peerings with the various peers.
+
+[[./images/pull-shark-default.png][A nice logo!]]
