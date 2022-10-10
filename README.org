@@ -22,3 +22,10 @@ The tool utilizes Netbox (IPAM to contain announcement prefixes) and peering-man
 | h k     | h            | kjh     | kjh             |
 | kj h    |              |         |                 |
 |---------+--------------+---------+-----------------|
+
+** Main documentation
+
+You can find the detailed documentation in the project's wiki
+[[https://github.com/kzorba/test-repo/wiki]]
+
+** License
