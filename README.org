@@ -1,4 +1,3 @@
-#+TITLE: Readme
 #+AUTHOR: Kostas Zorbadelos (kzorba AT nixly DOT net)
 
 * bgp-te-tool: A tool to automate BGP Traffic Engineering in ISPs
