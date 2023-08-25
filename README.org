@@ -1,30 +1,51 @@
-#+AUTHOR: Kostas Zorbadelos (kzorba AT nixly DOT net)
+#+title: g-ulysses: model | explore | plan
+#+author: Kostas Zorbadelos <kzorba@nixly.net>
+#+options: num:1
+# +SETUPFILE: org-html-themes/org/theme-readtheorg-local.setup
 
-* bgp-te-tool: A tool to automate BGP Traffic Engineering in ISPs
-** Description
-A demonstration of a BGP TE tool in a lab topology using Juniper vMX routers.
+# [[./logo/github/GitHub_03_1280x640px.png]]
 
-The tool utilizes Netbox (IPAM to contain announcement prefixes) and peering-manager (for eBGP Internet peerings) as sources of truth. These systems contain our intended announcements, their policy and all the BGP peerings with the various peers.
-
-#+CAPTION: A black cat stalking a spider
-#+ATTR_HTML: :width 20px
-[[./images/pull-shark-default.png]]
+* Introduction
+This page serves as initial notes for a new open source IP network tool. It provides a functionality scope, the initial design architecture and thoughts about the implementation.
 
 
-|---------+--------------+---------+-----------------|
-| Ena     | Δύο          | Τέσσερα | Για να δούμε... |
-| δκφξηκκ | jshjhjhkjhkj | kjhkjh  | kjhkjh kh       |
-| kjnkjh  | kjhk         | jhkjh k | kjh             |
-| kjhk    | jhk          | jhk     | jhk             |
-| h k     | hk           | j h     | kjh             |
-| kjh     | kjh          | kjh     | kj              |
-| h k     | h            | kjh     | kjh             |
-| kj h    |              |         |                 |
-|---------+--------------+---------+-----------------|
+* Purpose and feature scope
+** Network Modeling
+** Data exploration
+** Planning tool
 
-** Main documentation
+* Relevant RFCs
+- [[https://datatracker.ietf.org/doc/html/rfc7752][RFC 7752: North-Bound Distribution of Link-State and Traffic Engineering (TE) Information Using BGP]]
+- [[https://datatracker.ietf.org/doc/html/rfc4655][RFC 4655: A Path Computation Element (PCE)-Based Architecture]]
+- [[https://datatracker.ietf.org/doc/html/rfc5440][RFC 5440: Path Computation Element (PCE) Communication Protocol (PCEP)]]
+- [[https://datatracker.ietf.org/doc/html/rfc8345][RFC 8345: A YANG Data Model for Network Topologies]]
+- [[https://datatracker.ietf.org/doc/html/rfc8346][RFC 8346: A YANG Data Model for Layer 3 Topologies]]
+- [[https://datatracker.ietf.org/doc/html/rfc8571][RFC 8571: BGP - Link State (BGP-LS) Advertisement of IGP Traffic Engineering Performance Metric Extensions]]
 
-You can find the detailed documentation in the project's wiki
-[[https://github.com/kzorba/test-repo/wiki]]
+* Software architecture and implementation thoughts
 
 ** License
+
+* Task Notes [0/2]
+** TODO Documentation
++ [X] Write an initial scope and design document.
++ [-] Write and update the list of supported rfcs.
++ [ ] Write the software architecture document after initial skeleton implementation.
+
+** HOLD Implementation
++ [-] Create a github organization and repository.
++ [ ] Implement a very basic core that collects network topology data via =bgp-ls=.
++ [ ] Implement a model serializer, can do import / export of the model.
++ [ ] Implement a rough initial GraphQL API on the collected network data.
++ [ ] Implement a CLI client using the GraphQL API.
++ [ ] Collect data regarding network tunnels (lsps) and incorporate them in the model. Expose tunnel information via the GraphQL API.
++ [ ] Introduce a path computation component / engine on top of the model. Expose the path computation via the API.
++ [ ] Incorporate flow data in the model.
++ [ ] Implement simulation of a flow routing on the topology.
++ [ ] Planner: given a demand matrix, simulate the routing on the topology and show link utilization.
++ [ ] Planner: Implement what-if scenaria and analysis.
+
+* Contact
+The tool is currently at the very initial stages of design and implementation, so keep an eye on this space for developments. If you are a network operator and wish to share you support or thoughts / ideas about the tool, feel free to reach me at
+
+Another option for design ideas is to open a github issue on this repository.
