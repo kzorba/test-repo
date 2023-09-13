@@ -3,7 +3,9 @@
 #+options: num:1
 # +SETUPFILE: org-html-themes/org/theme-readtheorg-local.setup
 
-[[./images/g-ulysses.png]]
+|--------------------------|
+| [[./images/logo_github.png]] |
+|--------------------------|
 
 * Introduction
 This page serves as initial notes for a new open source IP network tool. It provides a functionality scope, the initial design architecture and thoughts about the implementation.
